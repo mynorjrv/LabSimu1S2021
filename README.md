@@ -1,2 +1,2 @@
-# LabSimu1S2021
-Mi repositorio para mi clase de Simulación.
+# LabSimu1S2021MR
+Repositorio para mi clase de Simulación.
