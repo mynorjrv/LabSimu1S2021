@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#El combo de numeral exclamacion suele llamarse shebag
+#usare este cript para imprimir fecha de mis bitácoras
+
+fecha=$(date +%Y)
+
+
+echo $fecha
