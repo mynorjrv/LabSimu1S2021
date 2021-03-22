@@ -42,6 +42,7 @@ echo Para Compilar: gcc -o $nombre $fnombre >> $fnombre
 echo "Version: 1.0" >> $fnombre
 echo "librerias: stdio (u otras)" >> $fnombre
 
+
 #resumen, entradas, salidas
 #Supngo que pude hacer un if bonito
 echo; echo #no se lo de insertar linea :(
@@ -59,8 +60,21 @@ read -p "Escriba las salidas del programa: " resumen
 echo "Salidas: " $resumen >> $fnombre
 echo "*/" >> $fnombre
 
+
 #librerias
 echo "" >> $fnombre
 echo "//Librerias" >> $fnombre
 echo "//Recuerde añadirlas al header" >> $fnombre
 echo "#include <stdio.h>" >> $fnombre
+
+#variables
+echo "" >> $fnombre
+echo "//Varibales" >> $fnombre
+
+#main
+echo "" >> $fnombre
+echo "int main(void){" >> $fnombre
+echo "" >> $fnombre
+echo "" >> $fnombre
+echo "  return 0;" >> $fnombre
+echo "}" >> $fnombre
