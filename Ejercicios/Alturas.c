@@ -54,13 +54,13 @@ int main(void){
   //si tenemos datos regresa Media, maximo y minimo
   if (n==0){
     printf("No positivos\n");
-    return 0;
   }
   else{
     //los imprimo con tres decimales
     printf("Media: %.3f, Máximo: %.3f, Mínimo: %.3f \n", med/n, max, min);
-    return 0;
   }
+
+  return 0;
 
 }
 
