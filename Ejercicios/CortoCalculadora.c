@@ -81,6 +81,7 @@ int main(void){
 //Definición de funciones
 //Las funciones son enteras porque lo que me interesa es que me
 //de el resultado en consola
+//creo que pude usar void
 int suma(float a,float b){
   printf("La suma es: %f \n", a + b);
   return 0;
