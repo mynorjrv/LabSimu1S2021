@@ -40,6 +40,7 @@ void main(){
     //se obtiene el coeficiente de correlacion
     r=(n*sumdatamul(x,y)-sumdata(x)*sumdata(y))/sqrt((n*sumdatamul(x,x)-sumdata(x)*sumdata(x))*(n*sumdatamul(y,y)-sumdata(y)*sumdata(y)));
     printf("y = %f x + %f\n",m,b);
+    printf("para 5 meses tendremos %f, y para 10 %f.\n", 20*m + b, 40*m + b); 
     //el coeficiente de determinacion es el cuadrado de r
     printf("Coeficciente de determinacion: %f\n",r*r);
 }

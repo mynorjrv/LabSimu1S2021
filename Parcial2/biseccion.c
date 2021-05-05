@@ -22,19 +22,17 @@ int NMAX = 10000;
 float TOL = 0.000001;
 
 //funcion a encontrar raiz
-double f(float x){
+double f(float x)
   return (asin(x));
-}
 
 //funciones a utilizar
 void checkeando(float i, float j);
 
 int main(void){
-  //chequeando
+  //chequeando que los datos funcionen
   checkeando(a, b);
-  //variable de control
-  int N = 1;
-  float c;
+  int N = 1;//variable de control
+  float c;//variable que ira cambiando el limite
   printf("Rango: [%.2f,%.2f]\n", a, b);
   
   while (N<=NMAX){
@@ -47,7 +45,6 @@ int main(void){
 
     printf("%d %f %f %f\n", N, a, b, f(c));
     (f(c)*f(a)>0) ? (a=c) : (b=c);
-
     N++;
   }
 
