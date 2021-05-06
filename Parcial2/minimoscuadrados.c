@@ -2,7 +2,7 @@
 Autor (usuario):  mynorjrv
 Fecha:  lun 03 may 2021 19:56:03 CST
 compilador:  gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
-Para Compilar: gcc -o minimoscuadrados minimoscuadrados.c
+Para Compilar: gcc -o minimoscuadrados minimoscuadrados.c -lm
 Version: 1.0
 librerias: stdio, math
 Resumen:  Implementación del método de mínimos cuadrados, copiado del 
@@ -11,6 +11,7 @@ Entradas: No pide entradas pero se debe ingresar a pata los vectores
           con datos.
 Salidas: 
 */
+//Tengo que ser honesto y decir que solo comente el hecho en clase xd
 
 //Librerias
 #include <stdio.h>
@@ -31,15 +32,20 @@ float sumdatamul(float datos1[], float datos2[]);
 void main(){
     //se inicializa las variables necesarias
     float b, m, r;
+          
     //impresion de los datos
     imprimirvec(x);
     imprimirvec(y);
+          
     //valores de cada parte de la ecuacion lineal
     m=( n*sumdatamul(x,y) - sumdata(x)*sumdata(y) )/( n*sumdatamul(x,x) - sumdata(x)*sumdata(x) );
     b=( sumdata(y) - m*sumdata(x) )/n;
+          
     //se obtiene el coeficiente de correlacion
     r=(n*sumdatamul(x,y)-sumdata(x)*sumdata(y))/sqrt((n*sumdatamul(x,x)-sumdata(x)*sumdata(x))*(n*sumdatamul(y,y)-sumdata(y)*sumdata(y)));
+          
     printf("y = %f x + %f\n",m,b);
+    //Esto si lo cambie, de una vez me regresa los resultados que esperaba
     printf("para 5 meses tendremos %f, y para 10 %f.\n", 20*m + b, 40*m + b); 
     //el coeficiente de determinacion es el cuadrado de r
     printf("Coeficciente de determinacion: %f\n",r*r);

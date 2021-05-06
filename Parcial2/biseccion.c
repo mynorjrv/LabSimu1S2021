@@ -13,7 +13,7 @@ Salidas:
 //Librerias
 //Recuerde añadirlas al header
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> //esta es necesaria para el exit
 #include <math.h>
 
 //Varibales
@@ -26,23 +26,26 @@ double f(float x)
   return (asin(x));
 
 //funciones a utilizar
-void checkeando(float i, float j);
+void checkeando(float i, float j); //Solo sirve para que los datos de entrada esten correctos
 
 int main(void){
   //chequeando que los datos funcionen
   checkeando(a, b);
   int N = 1;//variable de control
   float c;//variable que ira cambiando el limite
-  printf("Rango: [%.2f,%.2f]\n", a, b);
+  printf("Rango: [%.2f,%.2f]\n", a, b); //imprime el rango elegido
   
+  //Esto es lo importante
   while (N<=NMAX){
-    c = (a + b)/2;
+    c = (a + b)/2; //punto medio del rango
 
     if ((f(c)==0)||( ((b-a)/2)<TOL )){
+      //si el punto medio hace cero la funcion o llega mas cerca que la tolerancia termina
       printf( "Una raíz es %.6f.\n", c);
       return 0;
     }
 
+    //imprimo la interacion, cambio el valor del limite y sumo la iteracion
     printf("%d %f %f %f\n", N, a, b, f(c));
     (f(c)*f(a)>0) ? (a=c) : (b=c);
     N++;
@@ -52,7 +55,7 @@ int main(void){
   return 0;
 }
 
-
+//y esta es la que chequeaba
 void checkeando(float i, float j){
   char dummy[30];
   if (j<=i){
