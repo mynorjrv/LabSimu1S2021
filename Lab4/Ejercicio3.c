@@ -2,7 +2,7 @@
 Autor (usuario):  mynorjrv
 Fecha:  jue 06 may 2021 16:36:15 CST
 compilador:  gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
-Para Compilar: gcc -o Ejercicio3 Ejercicio3.c
+Para Compilar: gcc -o Ejercicio3 Ejercicio3.c -lm
 Version: 1.0
 librerias: stdio, math
 Resumen:  Operaciones con vectores
@@ -50,7 +50,7 @@ int main(void){
   printf("|V2| = %f\n", magnitud(V2, dim) );
 
   //Suma de vectores
-  //la verdad esto me parece perdida de tiempo... pude solo sumar xd
+  //la verdad no me termina de agradar... pude solo sumar en el argumentoxd
   //Lo que podria hacer es una suma de componentes... pero meh, aguanta
   float Suma[dim];
   for(int i=0; i<dim; i++)
