@@ -4,7 +4,7 @@ Fecha:  mié 05 may 2021 20:43:20 CST
 compilador:  gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
 Para Compilar: gcc -o Ejercicio2 Ejercicio2.c
 Version: 1.0
-librerias: stdio (u otras)
+librerias: stdio
 Resumen:  Ordanamiento de un vector mediante metodo de burbuja.
 Entradas: 
 Salidas: 
@@ -13,12 +13,11 @@ Salidas:
 //Librerias
 //Recuerde añadirlas al header
 #include <stdio.h>
-#define numerodeDatos 5 //con el afan de hacerlo in poco mas general
-
-//Varibales
-int vectorDatos[numerodeDatos];
 
 int main(void){
+  int vectorDatos[5];
+  int numerodeDatos = sizeof(vectorDatos)/sizeof(vectorDatos[0]);
+  
   puts("Puede ingresar 5 datos cualesquiera.");
   for( int i=0; i<numerodeDatos; i++){
     printf("Ingrese numero %d: ", i+1);
