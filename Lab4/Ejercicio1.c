@@ -29,13 +29,11 @@ void decrecendo(int a[], int lenght);
 
 int main(void){
   char letra = 'x';
-  printf("El largo es %i.", Largo);
     
   while(1){
-    if( letra!='a' || letra!='d'){
-      printf("Ingrese 'a' si quiere ver los datos ascendentes o 'd' si los quiere ver descendentes: ");
-      scanf("%c", &letra);
-    }
+    printf("Ingrese 'a' si quiere ver los datos ascendentes o 'd' si los quiere ver descendentes: ");
+    
+    scanf("%s", &letra);
     
     if( letra == 'a' ){
       crecendo(A, Largo);
@@ -45,6 +43,8 @@ int main(void){
       decrecendo(A, Largo);
       break;
     }
+
+    printf("Ingrese un valor valido.\n");
   }
 
   return 0;
