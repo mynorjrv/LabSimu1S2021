@@ -62,6 +62,7 @@ int main(void){
   printf("V1 * V2 = %f\n", punto(V1, V2, dim));
 
   //Producto cruz
+  //esto servira en el determinante :)
   float Cruz[dim];
   for(int i=0; i<dim; i++)
     Cruz[i] = V1[(i+1)%3]*V2[(i+2)%3] - V2[(i+1)%3]*V1[(i+2)%3];
