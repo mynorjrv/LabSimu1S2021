@@ -16,7 +16,6 @@ Salidas:  distintas salidas
 
 //Varibales
 float a;
-float dummy;
 float matA[3][3];
 float matB[3][3];
 
