@@ -38,20 +38,21 @@ double m0_AhMun = 1.1*pow(10, 5);
 double mf0_AhMun = 1.5*pow(10, 6);
 
 double E0_AhauKin = 2.7*pow(10, 7);
-double TSFC_AhauKin = 2.7*pow(10, 7);
+double TSFC_AhauKin = 2.248*pow(10, -4);
 double CD_AhauKin = 61.27;
 double A_AhauKin = 201.06;
 double m0_AhauKin = 1.1*pow(10, 5);
 double mf0_AhauKin = 1.5*pow(10, 6);
 
 double E0_Chac = 2.5*pow(10, 7);
-double TSFC_Chac = 2.248*pow(10, 7);
+double TSFC_Chac = 2.248*pow(10, -4);
 double CD_Chac = 70.25;
 double A_Chac = 215;
 double m0_Chac = 1.8*pow(10, 5);
 double mf0_Chac = 2.1*pow(10, 6);
 
 //Aca vere funciones
+//Estas dos son faciles
 double g( double yt){
   return( (G*MT)/pow((RT + yt), 2));
 }
@@ -64,6 +65,7 @@ double rho(double yt){
   return 0;
 }
 
+//Pero estas dependen del cohete
 double mc(double tiempo, double m0, double mf0, double TSFC, double E0){
   if( mf0 > TSFC*E0*tiempo )
      return( m0 + mf0 - TSFC*E0*tiempo );
@@ -87,6 +89,7 @@ double acel(double tiempo, double altura, double velocidad, double m0, double mf
 }
 
 int main(void){
+  //Las impresiones las hice una por una
   puts("Información de Ah Mun");
   printf("Empuje del cohete E0: %.2e\n", E0_AhMun);
   printf("Consumo especifico del empuje: %.2e\n", TSFC_AhMun);
@@ -145,10 +148,13 @@ int main(void){
   double aux;
 
   while(h_AhMun > 0){
+    //Escribir en el archivo
     fprintf(pf,"%.2f\t%.2f\t%.2f\t%.2f\n",h_AhMun,v_AhMun,t_AhMun, a_AhMun);
 
+    //Creo que la implementacion va asi
     v_AhMun += a_AhMun*0.1;
 
+    //Esta aux es para guardar el maximo
     aux = h_AhMun;
     h_AhMun += v_AhMun*0.1;
     if( h_AhMun > aux)
@@ -161,7 +167,7 @@ int main(void){
 //cerrar archivo
   fclose(pf);
 
-
+  //Y lo demas es lo mismo
   //Y creo que los datos nada que ver... pero a ver...
   //Probemos uno con AhauKin
   double h_AhauKin = 0.73; //es la atura inicial
