@@ -7,9 +7,9 @@ set grid
 set key left top
 
 set terminal jpeg
-set output 'Altura contra tiempo AhMun.jpg'
+set output 'Altura contra tiempo Chac.jpg'
 
 set xlabel "t"
 set ylabel "y"
 
-plot "Info_Ah_Mun" using 3:1
+plot "Info_Chac" using 3:1
